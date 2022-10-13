@@ -175,26 +175,26 @@ data_folium.head()
 # In[69]:
 
 
-## !! Bij error RUN 1 code onder en run dan deze code opnieuw !!
-##Maken van een nieuwe folium map genaamd i
-#i = folium.Map(location=[52.3545828, 4.7638778], zoom_start=4, top="2%", tiles="Stamen Toner")
-#
-##For loop gebruiken waarbij elke row wordt verbonden aan een marker + categorie kleur.
-#for index, row in data_folium.iterrows() :
-#    folium.CircleMarker(location=[row['latitude'], row['longitude']], radius = 0.8, popup=row['countryID'], fill=True, fill_opacity=0.2, opacity=0).add_to(i)
-#    
-#
-##Legenda
-#
-#lgd_txt = '<span style="color: {col};">{txt}</span>'
-#
-#
-#for idx, color in enumerate(['Blauwe vlek']):  # color choice is limited
-#    fg = folium.FeatureGroup(name= lgd_txt.format( txt= color+' = Aanwezigheid van een laadpaal', col= 'blue'))
-#    i.add_child(fg)
-#
-#folium.map.LayerControl('topleft', collapsed= False).add_to(i)
-#i
+# !! Bij error RUN 1 code onder en run dan deze code opnieuw !!
+#Maken van een nieuwe folium map genaamd i
+i = folium.Map(location=[52.3545828, 4.7638778], zoom_start=4, top="2%", tiles="Stamen Toner")
+
+#For loop gebruiken waarbij elke row wordt verbonden aan een marker + categorie kleur.
+for index, row in data_folium.iterrows() :
+    folium.CircleMarker(location=[row['latitude'], row['longitude']], radius = 0.8, popup=row['countryID'], fill=True, fill_opacity=0.2, opacity=0).add_to(i)
+    
+
+#Legenda
+
+lgd_txt = '<span style="color: {col};">{txt}</span>'
+
+
+for idx, color in enumerate(['Blauwe vlek']):  # color choice is limited
+    fg = folium.FeatureGroup(name= lgd_txt.format( txt= color+' = Aanwezigheid van een laadpaal', col= 'blue'))
+    i.add_child(fg)
+
+folium.map.LayerControl('topleft', collapsed= False).add_to(i)
+i
 
 
 # In[68]:
