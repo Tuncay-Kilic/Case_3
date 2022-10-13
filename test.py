@@ -215,7 +215,7 @@ colormap.caption = 'Hoeveelheid laadpalen per dichtheid Nederland'
 colormap
 colormap.add_to(i)
 
-display(i)
+i
 
 
 # In[ ]:
