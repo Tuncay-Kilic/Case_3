@@ -131,12 +131,13 @@ st.subheader('Hieronder een histogram waarin de laadtijd en extra laadtijd wordt
 
 
 #Visualisatie van charging vs non charging
+fig_rood, ax = plt.subplots()
 labels = ['Non-charge time', 'Charge time']
-plt.hist([df_laadpaal['noncharging'], df_laadpaal['ChargerTime_InMin']],stacked = True, bins = 10, range = [1, 485])
+ax.hist([df_laadpaal['noncharging'], df_laadpaal['ChargerTime_InMin']],stacked = True, bins = 10, range = [1, 485])
 plt.title('Charge time vs non-charge time')
 plt.legend(labels)
 plt.show()
-st.pyplot()
+st.pyplot(fig_rood)
 
 
 # In[12]:
