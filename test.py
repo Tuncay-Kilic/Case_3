@@ -202,11 +202,14 @@ st.subheader("'Max power bij het opladen van auto's")
 
 
 #Profiel laadgebruik over tijd, over een sample.
-plt.plot(df_laadpaal['Ended'][0:50], df_laadpaal['MaxPower'][0:50])
-plt.title('Laadprofiel 2018')
+fig_lijn, ax = plt.subplots()
+ax.plot(df_laadpaal['Ended'][0:47], df_laadpaal['MaxPower'][0:47])
+plt.title('Laadprofiel 2018-01-01')
 plt.xticks(np.arange(0,0, step=1), rotation = 90)
 plt.xlabel('tijd')
 plt.ylabel('Max power (W)')
+plt.show()
+st.pyplot(fig_lijn)
 
 
 # In[19]:
