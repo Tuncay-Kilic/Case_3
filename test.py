@@ -446,12 +446,12 @@ st.text('Er zijn verschillende files geimporteerd')
 # In[38]:
 
 
-#code8= '''
-#wegenbelastingdf = pd.read_csv("opbrengst-motorrijtuigenbelasting.csv")
-#elektrobelasting = pd.read_excel("elekautotovbelasting.xlsx")
-#mergedf = pd.read_excel("mergedf.xlsx")
-#'''
-#st.code(code8, language = 'python')
+code8= '''
+wegenbelastingdf = pd.read_csv("opbrengst-motorrijtuigenbelasting.csv")
+elektrobelasting = pd.read_excel("elekautotovbelasting.xlsx")
+mergedf = pd.read_excel("mergedf.xlsx")
+'''
+st.code(code8, language = 'python')
 
 
 # In[39]:
