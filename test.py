@@ -194,7 +194,8 @@ for idx, color in enumerate(['Blauwe vlek']):  # color choice is limited
     i.add_child(fg)
 
 folium.map.LayerControl('topleft', collapsed= False).add_to(i)
-i
+folium_static(i)
+#i
 
 
 # In[68]:
